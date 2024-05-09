@@ -7,6 +7,7 @@
 // Don't use a sorting function from a library.
 
 #include <iostream>
+using namespace std;
 
 // sort_array()
 // Summary: This function receives an array of integers and sorts it in ascending order.
@@ -17,8 +18,21 @@
 bool sort_array(int *arr, int n){
 
     // Write your code here
-
-    return false;
+    int i = 0;
+    int j = 1;
+    int temp = 0;
+    while((i <= n-1)&&(j<n)){
+        if(arr[j] < arr[i]){ //if element ahead is smaller, swap it with the one before
+            temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
+            i = -1;
+        } 
+        i++;
+        j = i+1;
+        
+    }
+    return arr;
 }
 
 // Main function
