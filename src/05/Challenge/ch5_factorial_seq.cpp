@@ -8,22 +8,25 @@
 // Print the sequence on the screen.
 
 #include <iostream>
-
+using namespace std;
 // print_factorials()
 // Summary: This function receives a (small) positive integer n and prints out a sequence from 0! through n!.
 // Arguments:
 //           n: The argument of the last factorial to print.
 // Returns: n!, the last calculated factorial.
 int print_factorials(int n){
-    
     // Write your code here
-
-    return 0;
+    if(n == 0){
+        return 1;
+    }
+    int temp = n * print_factorials (n-1);
+    cout << temp << endl;
+    return temp;
 }
 
 // Main function
 int main(){
     print_factorials(10);
-    std::cout << std::endl << std::endl << std::flush;
+    std::cout << std::endl <<std::endl << std::flush;
     return 0;
 }
